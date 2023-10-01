@@ -6,6 +6,7 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.6/cookieconsent.min.css'>
   <script src="https://cdn.sellix.io/static/js/embed.js"></script>
   <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/>
+  <link href="logo.png" rel="shortcut icon">
 <style>
     @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic);
 .dropdown-container {
@@ -347,11 +348,52 @@ a, a:hover {
   background-image: transparent;
 }
 
-</style>
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  overflow: hidden;
+  animation: hide 1s linear forwards;
+  animation-delay: 1s;
+  background: url("logo.png") no-repeat center #202020;
+  background-size: cover;
+}
 
+.container {
+  animation: show 1s linear forwards;
+  animation-delay: 1s;
+  background-color: #202020;
+  color: #fff;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes hide {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+</style>
 </head>
-<body>
+<body style="background-color: #202020;">
+
+<div class="preloader"></div>
 <!-- partial:index.partial.html -->
+
 <main class="main-ctnr">
   <h1><a style="color: #fff; text-decoration: none;" href="">Welcome to <abbr style="text-decoration: none;" title="The Best Marketplace Worldwide">GotBins</abbr></a></h1>
 
@@ -359,14 +401,14 @@ a, a:hover {
     <nav role='navigation' class="clearfix">
         <ul class="dropdown-container fll">
             <li><a href="#">GotBins</a></li>
-            <li><a href="#">Services</a>
+            <!-- <li><a href="#">Services</a>
                 <div class="dropdown" href="" >
-                    <!-- <p><a href="#" style="color: #fff;text-decoration: none;">Subscription</a></p>
+                     <p><a href="#" style="color: #fff;text-decoration: none;">Subscription</a></p>
                     <p><a href="#" style="color: #fff;text-decoration: none;">Plans</a></p>
-                    <p><a href="#" style="color: #fff;text-decoration: none;">in-house features</a></p> -->
+                    <p><a href="#" style="color: #fff;text-decoration: none;">in-house features</a></p>
                     <p><a href="#" style="color: #fff;text-decoration: none;">Coming Soon</a></p>
                     <p><a href="#" class="close">Close [x]</a></p>
-                </div>
+                </div> -->
             </li>
             <li><a href="#">More</a>
                 <div class="dropdown">
@@ -377,7 +419,7 @@ a, a:hover {
             </li>
         </ul>
         <ul class="dropdown-container flr">
-            <li><a href="#" class="no-arrow">Login</a></li>
+            <li><a href="#" class="no-arrow" style="background-color: #bbb;">Login</a></li>
             <!-- <li><a href="#">Cart</a>
                 <div class="dropdown cart">This DIV would contain the shopping cart information
                     <p><a href="#" class="close">Close [x]</a></p>
@@ -416,7 +458,7 @@ a, a:hover {
   
       <div id=D class="tl_section d">
         <h2 style="color: #fff;">Heres some products</h2>
-       <p style="color: #fff;"><a href="https://gotbins.mysellix.io" style="color: #9900ff;text-decoration: none;"><b>See all products</b></a></p> 
+        <p style="color: #fff;"><a href="https://gotbins.mysellix.io" style="color: #9900ff;text-decoration: none;"><b>see all products</b></a></p> 
         <table class="rwd-table">
           <tr >
           <td style="padding: 10px;">ID</td>
