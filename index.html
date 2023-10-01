@@ -2,7 +2,6 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="./style.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.6/cookieconsent.min.css'>
   <script src="https://cdn.sellix.io/static/js/embed.js"></script>
   <link href="https://cdn.sellix.io/static/css/embed.css" rel="stylesheet"/>
@@ -119,9 +118,9 @@ html {
 
 body {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iODAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMzQzNjJlIi8+PHN0b3Agb2Zmc2V0PSI4MCUiIHN0b3AtY29sb3I9IiMyNzI4MjIiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background: -moz-radial-gradient(#34362e, #272822 80%);
-  background: -webkit-radial-gradient(#34362e, #272822 80%);
-  background: radial-gradient(#34362e, #272822 80%);
+  background: -moz-radial-gradient(#202020, #202020 80%);
+  background: -webkit-radial-gradient(#151515, #151515 80%);
+  background: radial-gradient(#151515, #151515 80%);
   color: white;
   font: 16px 'Source Sans Pro', Arial, Helvetica, sans-serif;
   padding: 20px 50px;
@@ -348,23 +347,22 @@ a, a:hover {
   background-image: transparent;
 }
 
+
 .preloader {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 9999;
   overflow: hidden;
-  animation: hide 1s linear forwards;
-  animation-delay: 1s;
+  animation: hide 3s linear forwards;
+  animation-delay: 3s;
   background: url("logo.png") no-repeat center #202020;
   background-size: cover;
 }
 
 .container {
-  animation: show 1s linear forwards;
+  animation: show 2s linear forwards;
   animation-delay: 1s;
-  background-color: #202020;
-  color: #fff;
 }
 
 @keyframes show {
@@ -389,12 +387,13 @@ a, a:hover {
 }
 </style>
 </head>
-<body style="background-color: #202020;">
+<div class="preloader" style="max-width: 100%;margin-top: -50px; margin-left: -60px;"></div>
+<body >
 
-<div class="preloader"></div>
+
 <!-- partial:index.partial.html -->
 
-<main class="main-ctnr">
+<main class="main-ctnr" >
   <h1><a style="color: #fff; text-decoration: none;" href="">Welcome to <abbr style="text-decoration: none;" title="The Best Marketplace Worldwide">GotBins</abbr></a></h1>
 
     <hr>
@@ -458,8 +457,8 @@ a, a:hover {
   
       <div id=D class="tl_section d">
         <h2 style="color: #fff;">Heres some products</h2>
-        <p style="color: #fff;"><a href="https://gotbins.mysellix.io" style="color: #9900ff;text-decoration: none;"><b>see all products</b></a></p> 
-        <table class="rwd-table">
+        <br/>
+        <table class="rwd-table" style="width: 400px; background-color: #000; border-radius: 6px;padding:10px;">
           <tr >
           <td style="padding: 10px;">ID</td>
           <td>Product Name</td>
@@ -470,7 +469,7 @@ a, a:hover {
             <th style="padding: 10px; color: #9900FF;">001</th>
             <th>GotBins.exe</th>
             <th style="color: #27ff27;">£14.99 </th>
-            <th><button style="background-color: #bbb;color: #000;border-radius: 6px;" data-sellix-product="65183a25f12ea"
+            <th><button style="background-color: #bbb;color: #000;border-radius: 6px; padding: 4px;" data-sellix-product="65183a25f12ea"
               type="submit"
               alt="Buy Now with GotBins">Buy Now</button></th>
           </tr>
@@ -478,25 +477,26 @@ a, a:hover {
             <th style="padding: 10px; color: #9900FF;">002</th>
             <th>Login4GotBins</th>
             <th style="color: #27ff27;">£150.00 </th>
-            <th><button style="background-color: #bbb;color: #000;border-radius: 6px;" data-sellix-product="64b359464b3ca"
+            <th><button style="background-color: #bbb;color: #000;border-radius: 6px; padding: 4px;" data-sellix-product="64b359464b3ca"
               type="submit"
               alt="Buy Now with GotBins">Buy Now</button></th>
           </tr>
            <tr>
-            <th style="color: #9900FF;">003</th>
+            <th style="padding:10px; color: #9900FF;">003</th>
             <th>Topup4GotBins</th>
             <th style="color: #27ff27;">£100</th>
-            <th><button style="background-color: #bbb;color: #000;border-radius: 6px;" data-sellix-product="64b35c61c7770"
+            <th><button style="background-color: #bbb;color: #000;border-radius: 6px; padding: 4px;" data-sellix-product="64b35c61c7770"
               type="submit"
-              alt="Buy Now with GotBins">Buy Now</button></th>
+              alt="Buy Now with GotBins" >Buy Now</button></th>
           </tr>
         </table>
+        <p style="color: #fff;"><a href="https://gotbins.mysellix.io" style="color: #9900ff;text-decoration: none;"><b>see all products</b></a></p> 
        
       </div>
   
       <div id=E class="tl_section e">
         <h2>Services</h2>
-        <p>See Services in detail. <a href="#" style="color: #9900ff;text-decoration: none;">Here</a>.</p>
+        <br/>
         <ul>
           <li>ccheckr</li>
           <li>crackr</li>
@@ -504,6 +504,8 @@ a, a:hover {
           <li>and a lot more</li>
 
         </ul>
+        <p>See Services in detail. <a href="#" style="color: #9900ff;text-decoration: none;">Here</a>.</p>
+      
       </div>
     
     </section>
@@ -556,7 +558,8 @@ a, a:hover {
     <p></p>
   
     <p style="color: #fff;">Available as a Github repo: <a style="color: #9900ff;text-decoration: none;" href="https://github.com/gotbins" target=_blank title="[new window]">GotBins</a>.</p>
-
+<br/>
+<br/>
   </main>
   
   
