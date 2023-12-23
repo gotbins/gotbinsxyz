@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERROR v0.0.28</title>
+</head>
+<body>
+    <h1>this page is broken go back <button><a href="./index.html">Go Home</a></button></h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <button style="background-color: #fff;color: #bbb;border-color: #fff;box-shadow: #fff;" id="downloadButton">test v0.0.28</button>
+
+
+</body>
+<script>
+    document.getElementById('downloadButton').addEventListener('click', downloadZipFile);
+    
+    function downloadZipFile() {
+        // Replace 'YOUR_ZIP_FILE_URL' with the actual URL of your zip file
+        const zipFileUrl = '/v0.0.28/gotbins.zip';
+
+        // Fetch the zip file
+        fetch(zipFileUrl)
+            .then(response => response.blob())
+            .then(blob => {
+                // Create a download link
+                const link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = '/v0.0.28/gotbins.zip';
+
+                // Append the link to the body
+                document.body.appendChild(link);
+
+                // Trigger the click event to start the download
+                link.click();
+
+                // Remove the link from the DOM
+                document.body.removeChild(link);
+            })
+            .catch(error => {
+                console.error('Error fetching the zip file:', error);
+            });
+    }
+
+    // Call the function when the page loads or as needed
+    // For example, you can trigger the download when a button is clicked
+    // document.getElementById('downloadButton').addEventListener('click', downloadZipFile);
+
+    // Uncomment the line above and replace 'downloadButton' with the actual ID of your button
+</script>
+</html>
