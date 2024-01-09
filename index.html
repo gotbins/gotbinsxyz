@@ -203,10 +203,38 @@ a:hover {
 * {
   font-family: 'Courier New', Courier, monospace;
 }
+.new_version1 {
+  color: #ccc;
+  background-color: hsla(240, 84%, 50%, 0.25);
+  border: 2px solid rgb(0, 0, 255);
+  border-radius: 12px;
+  margin: 2rem 0;
+  padding: 1rem;
+  position: relative;
+}
+.new_version1 > * {
+  margin: 0;
+}
+.new_version1 > a {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+.new_version1 > a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.new_version1 > p {
+  display: block;
+  font-weight: 300;
+}
 .new_version {
   color: #ccc;
-  background-color: hsla(240, 50%, 25%, 0.25);
-  border: 2px solid red;
+  background-color: hsla(0, 100%, 50%, 0.499);
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 12px;
   margin: 2rem 0;
   padding: 1rem;
   position: relative;
@@ -400,23 +428,20 @@ a, a:hover {
     <hr>
     <nav role='navigation' class="clearfix">
         <ul class="dropdown-container fll">
-            <li><a href="#">GotBins</a></li>
-            <!-- <li><a href="#">Services</a>
-                <div class="dropdown" href="" >
-                     <p><a href="#" style="color: #fff;text-decoration: none;">Subscription</a></p>
-                    <p><a href="#" style="color: #fff;text-decoration: none;">Plans</a></p>
-                    <p><a href="#" style="color: #fff;text-decoration: none;">in-house features</a></p>
-                    <p><a href="#" style="color: #fff;text-decoration: none;">Coming Soon</a></p>
-                    <p><a href="#" class="close">Close [x]</a></p>
-                </div> -->
+            <li><a href="#">GotBins</a>
+              <div class="dropdown">
+                <!-- <p><a href="#" style="color: #fff;text-decoration: none;">Sources</a></p> -->
+                <p><a href="#" class="close">Close [x]</a></p>
+              </div>
             </li>
             <li><a href="#">More</a>
                 <div class="dropdown">
-                  <p><a href="#" style="color: #fff;text-decoration: none;">Coming Soon</a></p>
+                  <p><a href="./content/index.html" style="color: #fff;text-decoration: none;">Content by GotBins</a></p>
                   <p><a href="#" style="color: #fff;text-decoration: none;">Sources</a></p>
-                    <p><a href="#" class="close">Close [x]</a></p>
+                  <p><a href="#" class="close">Close [x]</a></p>
                 </div>
             </li>
+        
         </ul>
         <ul class="dropdown-container flr">
             <li><a href="#" class="no-arrow" style="background-color: #bbb;">Login</a></li>
@@ -433,11 +458,16 @@ a, a:hover {
     <div class="new_version">
       <h2>New Version for 2024:   v0.0.28</h2>
       <a style="text-decoration: none; color: #9900ff;" href="" target=_self><b> GotBins v0.0.28</b></a>
-      <p>A complete rewrite, progressively enhanced, fully accessible, positionable tabs, improved features and responsive fetch times, while having fun games to play.</p>
-      <p>Updated (13-09-2023)</p>
+      <p>Updated (24-12-2023)</p><br/>
     </div>
-  
-  <p style="color: #fff; margin: 10px;">Use the <kbd>GotBins</kbd> network to make your journey.</p>
+    <div class="new_version1">
+      <h2>Note:</h2>
+      <a style="text-decoration: none; color: #fff;" href="" target=_self><b> GotBins.exe is nearly here</b></a>
+      <p>Updated (09-01-2024)</p><br/>
+      <a style="background-color: #9900ff; border-radius: 12px;padding: 5px;color: #fff;text-decoration: none;font-size: 12px;" href="./content/index.html">View Content</a></button>
+    </div>
+               
+  <p style="color: #fff; margin: 10px;">Use <kbd>GotBins.exe</kbd> to unlock your workflow.</p>
   
   <div class=tl_container>
   
@@ -541,8 +571,9 @@ a, a:hover {
   
       <!-- A second embedded tablist example -->
       <ul class="tl_list">
-        <li><a href=#H class=h style="color: #bbb;">Sources</a></li>
+        <!-- <li><a href=#H class=h style="color: #bbb;">Sources</a></li> -->
         <li><a href=#I class="tl_lnk-on I">Coming Soon</a></li>
+        <li><a href=#J class="j">Discord</a></li>
       </ul>
   
       <!-- <div id=H class="tl_section h">
@@ -555,6 +586,13 @@ a, a:hover {
         <p>> GotBins Chat</p>
         <p>> GotBins App</p>
        
+      </div>
+
+      <div id=J class="tl_section j">
+        <h2>Join our Discord today!</h2>
+        <iframe src="https://discord.com/widget?id=1127623459783057498&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        <h2>Become a member for exclusive discounts</h2>
+
       </div>
     </section>
   
@@ -569,6 +607,7 @@ a, a:hover {
     <p style="color: #fff;">Available as a Github repo: <a style="color: #9900ff;text-decoration: none;" href="https://github.com/gotbins" target=_blank title="[new window]">GotBins</a>.</p>
 <br/>
 <br/>
+
   </main>
  
   
