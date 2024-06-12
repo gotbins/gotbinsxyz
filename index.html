@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>GotBins - Algo trading</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+ <style>
+    @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  color: #999999 !important;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif !important;
+}
+
+.navbar__container {
+  background: #202020;
+  color: whitesmoke;
+}
+@media only screen and (min-width: 992px) {
+  .navbar__container {
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 250px;
+  }
+  .navbar-brand.second {
+    display: none !important;
+    color: whitesmoke;
+  }
+  #navbarNav ul li {
+    padding: 0 25px;
+  }
+  #navbarNav {
+    padding-left: 50px;
+  }
+  .navbar__container {
+    height: 80px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .hide-on-small {
+    display: none;
+  }
+
+  a.nav-link {
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+   .py-xl {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.hero-section{
+  width:100%;
+  height:100vh;
+ 
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.5)),url("./static/images/Algo-Trading-robot-inv.jpg");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+
+}
+
+section{
+  position:relative;
+  display:block;
+/*   overflow:hidden; */
+}
+
+.how-to-section{
+  background-color:#efefef;
+}
+.cta {
+    background: #262825;
+    color: #fff;
+    background: url("./static/images/Automated-decision-making.png.imgix.banner.png") 50% 50% no-repeat;
+    position: relative;
+    background-size: cover;
+}
+
+.cta:before {
+    position: absolute;
+    content: "";
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.58);
+}
+
+.background-img {
+    background-image: url("./static/images/Algo-Trading-robot-inv.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-position: 100% 0;
+    position: relative;
+}
+
+
+
+
+
+/* //////// */
+.position-absolute {
+    position: absolute!important;
+}
+.d-block {
+    display: block!important;
+}
+
+
+.single-step__number{
+/*    margin-left: .5rem; */
+  margin-right: 1rem; 
+  margin-top:.25rem;
+  border:1px solid;
+/*   padding:10px; */
+  width:30px;
+  height:30px;
+  line-height:28px;
+  border-radius:150px;
+  text-align:center;
+  background-color:inherit;
+}
+
+.features .single-step:last-child .single-step__dots {
+    display: none!important
+}
+
+.features .single-step__dots {
+    left: -2rem;
+    bottom: -12rem;
+    max-width: calc(100vw - 3rem)
+}
+
+@media (min-width: 576px) {
+    .features .single-step__dots {
+        width:110%;
+       left: -2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .features .single-step__dots {
+        left: -2rem;
+      bottom: -9rem;
+      width: 127%;
+    }
+}
+
+@media (min-width: 992px) {
+    .features .single-step__dots {
+        left: -2rem;
+    bottom: -11rem;
+    width: 120%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .features .single-step__dots {
+         width: 116%;
+        left: -2rem;
+        bottom: -14rem;
+    }
+}
+
+
+
+
+
+@media (-ms-high-contrast:none) and (min-width: 1200px),screen and (-ms-high-contrast:active) {
+    .features .single-step__dots {
+        width:170%
+    }
+}
+
+@media (min-width: 768px) {
+    .features .single-step__dots--left {
+        left: -138%;
+    bottom: -10.49rem;
+    width: 127%;
+    }
+}
+
+@media (min-width: 992px) {
+    .features .single-step__dots--left {
+      left: -127%;
+      bottom: -13rem;
+      width: 120%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .features .single-step__dots--left {
+   left: -122%;
+    bottom: -15rem;
+    width: 116%;
+    }
+}
+
+
+/* Utils  */
+.c-py-8 {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+} 
+ </style>
+ <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'>
+</head>
+<body>
+    <div class="navbar__container">
+       
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+          
+            <p>  <img src="./static/images/logo.png" style="width: 75px; height: auto; padding: 10px;"  />  Welcome to the GotBins Ecosystem. </p>
+        </nav>
+      </div>
+    <div class="navbar__container">
+        <div class="hide-on-small"><a class="navbar-brand" href="#">
+            <img src="./static/images/logo.png" style="width: 75px; height: auto;" />  GotBins</a> </div>
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+          <a class="navbar-brand second" href="#"> <img src="./static/images/logo.png" style="width: 75px; height: auto;" />
+            GotBins </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/more_gotbins">moreGotBins</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/scripts/free">FREE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+<section class="py-xl" style="background:#252525">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-5 col-lg-6 order-md-2">
+
+            <!-- Image -->
+            <img src="./static/images/Robot-bg.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="...">
+
+          </div>
+          <div class="col-12 col-md-7 col-lg-6 order-md-1">
+            <!-- Sub Heading -->
+            <span class="d-block text-center text-md-left text-uppercase mb-2 mt-4">GOTBINS TRADINGBOT</span>
+            <!-- Heading -->
+            <h1 class="display-4 text-center text-md-left">
+             Welcome to the world of <span class="text-primary" style="display: block;">robotic trading</span>
+            </h1>
+
+            <!-- Text -->
+            <p class="lead text-center text-md-left text-muted mb-5 mb-lg-8">
+              GotBins Tradingbot is software that automates the trading process using the embedded algorithm system.
+            </p>
+
+            <!-- Buttons -->
+            <div class="text-center text-md-left" style="color: #fff;">
+              <a href="" class="btn btn-primary text-white shadow lift mr-1" style="color: #fff ;">
+                Start Trading with a Bot
+              </a>
+             <a href="/docs/tradingbot" class="btn btn-primary-soft lift">
+                Documentation
+              </a> 
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+
+
+
+
+
+<!-- ABOUT SECTION -->
+<section class="py-xl bg-dark">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+
+                <!-- Sub title -->
+                <span class="d-block text-uppercase text-white  mb-2">What is Algo Trading</span>
+
+                <!-- Heading -->
+                <h1 class="display-4 text-white mb-4">Automated trading system</h1>
+
+                <!-- Text -->
+                <p class="font-size-lg text-muted mb-5"> This programme is created for traders who seek to use advanced technical solutions to eliminate the emotional component in trading without specialized IT knowledge.
+              With the help of the strategy designer, you can test and understand your strategy on demo account, which will allow you to fix them and prevent further mistakes on real market conditions.
+</p>
+
+                <!-- Button -->
+                <a id="call-to-action" href="#" class="btn btn-primary shadow lift mr-1" style="background-color: #9900ff;">Try now</a>
+
+            </div>
+        </div>
+    </div>
+</section><!-- END ABOUT SECTION -->
+
+
+
+
+
+
+<!-- FEATURES -->
+<section class="features py-xl">
+    <div class="container">
+
+        <!-- Sub title -->
+        <span class="d-block text-center text-uppercase mb-2">ALGO TRADING</span>
+        <h1 class="display-4 text-center mb-5">Features</h1>
+
+        <div class="steps-wrapper">
+
+            <div class="single-step pb-4 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+ <img width="250" height="250" src="./static/images/pip_calculater.png" class="single-step__image d-block mx-auto" alt="" >
+<!--                         <img width="420" height="348" src="https://effectiveexperiments.com/wp-content/uploads/2018/03/2018-AI-safety-grants.jpg" class="single-step__image d-block mx-auto" alt="" > -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6 c-mt-6 c-mt-md-0 order-md-1">
+                        <div class="row no-gutters">
+                            <div class="col col-auto">
+                                <span class="single-step__number font-size-32  d-block line-height-1-1 text-primary position-relative c-mr-4 c-mr-md-5 c-ml-md-5 " >1  
+                                  
+                                           </span>
+                            </div>
+                            <!-- /.col col-auto -->
+                            <div class="col">
+                                <div class="single-step__content-wrapper c-pr-5 position-relative z-index-1">
+
+                                    <h3>Modules</h3>
+                                    <div class="entry-content c-mt-4">
+                                      <span class="first-element-fix"></span>
+                                        <p>Algo Trading software allows you to set such parameters as: volume, take profit/stop loss, scale, indicators, arithmetic values and formulas.
+                                        </p>
+                                    </div>
+                                    <!-- /.entry-content c-mt-4 -->
+
+                                    <svg class="single-step__dots z-index-minus-1 d-block position-absolute" xmlns="http://www.w3.org/2000/svg" width="575.25" height="245" viewBox="0 0 575.25 245">
+                                        <title>step dots</title>
+                                        <path d="M.44,1.52v142c0,24.14,11.79,34.69,34.69,34.69,282,0,504.68-.34,504.68-.34,26.08,1,35,8.51,35,28v44.21" style="fill: none;stroke: #292b35;stroke-linecap: round;stroke-width: 1.5px;stroke-dasharray: 0,10"></path>
+                                    </svg>
+
+                                </div>
+                                <!-- /.single-step__content-wrapper c-pr-5 position-relative -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row no-gutters -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row align-items-center -->
+            </div>
+            <!-- /.single-step c-py-8 -->
+
+            <div class="single-step pb-4 pt-4 mb-5 mt-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6" >
+<img width="250" height="250" src="./static/images/signalsBot.png" style="border-radius: 50px;" class="single-step__image d-block mx-auto " alt="" >
+<!--                         <img width="420" height="251" src="https://gdprinformer.com/wp-content/uploads/2017/11/shutterstock_680929729.jpg" class="single-step__image d-block mx-auto " alt="" > -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6 c-mt-6 c-mt-md-0">
+                        <div class="row no-gutters">
+                            <div class="col col-auto">
+                                <span class="single-step__number font-size-32 d-block line-height-1-1 text-primary position-relative c-mr-4 c-mr-md-5 c-ml-md-5" >2 </span>
+                            </div>
+                            <!-- /.col col-auto -->
+                            <div class="col">
+                                <div class="single-step__content-wrapper c-pr-5 position-relative z-index-1">
+
+                                    <h3>Impassive</h3>
+                                    <div class="entry-content c-mt-4"><span class="first-element-fix"></span>
+                                        <p>Algo Trading software excludes emotional factor in trading, thereby helping to avoid numerous subjective errors often leading to loss of capital.
+                                        </p>
+                                    
+
+                                    <svg class="single-step__dots z-index-minus-1 single-step__dots--left d-block position-absolute" xmlns="http://www.w3.org/2000/svg" width="579" height="295" viewBox="0 0 579 295">
+                                        <title>step dots</title>
+                                        <path d="M1.37,293.94V243.09c0-27.29,13.79-39.21,40.56-39.21H536.46c30.47-1.16,40.91-9.62,40.91-31.64V-2.06" style="fill: none;stroke: #292b35;stroke-linecap: round;stroke-width: 1.5px;stroke-dasharray: 0,10"></path>
+                                    </svg>
+
+                                </div>
+                                <!-- /.single-step__content-wrapper c-pr-5 position-relative -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row no-gutters -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row align-items-center -->
+            </div>
+            <!-- /.single-step c-py-8 -->
+
+          
+          
+            <div class="single-step pb-4 pt-4 mb-5 mt-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2" >
+<img width="250" height="250" src="./static/images/tradingbot.png" style="border-radius: 50px;" class="single-step__image d-block mx-auto " alt="">
+                      
+                  </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6 c-mt-6 c-mt-md-0 order-md-1">
+                        <div class="row no-gutters">
+                            <div class="col col-auto">
+                                <span class="single-step__number font-size-32 d-block line-height-1-1 text-primary position-relative c-mr-4 c-mr-md-5 c-ml-md-5 " >3</span>
+                            </div>
+                            <!-- /.col col-auto -->
+                            <div class="col">
+                                <div class="single-step__content-wrapper c-pr-5 position-relative z-index-1">
+
+                                    <h3>Instant transactions</h3>
+                                    <div class="entry-content c-mt-4" ><span class="first-element-fix"></span>
+                                        <p>Algo Trading software is able to scan 50+ of charts at the same time, place and cancel the flow of orders at speeds inaccessible to human. (This will increase in future but our AI is still learning from our API).</p>
+                                    </div>
+                                    <!-- /.entry-content c-mt-4 -->
+
+                                    <svg class="single-step__dots z-index-minus-1 d-block position-absolute" xmlns="http://www.w3.org/2000/svg" width="575.25" height="245" viewBox="0 0 575.25 245">
+                                        <title>step dots</title>
+                                        <path d="M.44,1.52v142c0,24.14,11.79,34.69,34.69,34.69,282,0,504.68-.34,504.68-.34,26.08,1,35,8.51,35,28v44.21" style="fill: none;stroke: #292b35;stroke-linecap: round;stroke-width: 1.5px;stroke-dasharray: 0,10"></path>
+                                    </svg>
+
+                                </div>
+                                <!-- /.single-step__content-wrapper c-pr-5 position-relative -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row no-gutters -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row align-items-center -->
+            </div>
+            <!-- /.single-step c-py-8 -->
+
+           
+
+        </div>
+
+    </div>
+
+</section><!-- END FEATURES  -->
+
+
+
+
+
+
+<!-- CTA SECTION V 2 -->
+
+
+<section class="section call-to-action-landing  cta bg-dark" style=" padding-top: 9rem;padding-bottom: 6rem">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="mb-5 h4 text-white">Getting Started Today?<br></h2>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a id="call-to-action" href="#" class="btn btn-primary text-white shadow lift mr-1" >Start with GotBins Tradingbot</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class="modal fade account-select-dialog show" tabindex="-1" role="dialog" aria-labelledby="account selection" aria-modal="true" style="display: block; padding-left: 0px;">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content account-select-content">
+    <div class="modal-header" style="
+    border: none;
+    background-color: #252525;
+">
+<img src="./static/images/logo.png" style="width: 75px;height: auto;"/><h3 style="color: #fff;">Login to moreGotBins</h3>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+    
+    
+            <div class="container" style="background-color: #292b35;">   
+                
+            <img src="./static/images/logo.png" style="width: 75px;height: auto;"/>
+
+            
+            <a id="call-to-action" href="/signup" class="btn btn-secondary shadow lift mr-1 w-100 mb-3">Create a Account</a>
+            
+            <a id="call-to-action" href="/login" class="btn btn-secondary shadow lift mr-1 w-100 mb-3">Login</a>
+            
+            <a id="call-to-action" href="/login" class="btn btn-secondary shadow lift mr-1 w-100 mb-3">Login Standard</a>
+                                    
+                </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+partial -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
